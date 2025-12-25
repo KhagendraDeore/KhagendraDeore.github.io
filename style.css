@@ -28,6 +28,24 @@
   text-align: center;
 }
 
+/* PROFILE PHOTO */
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  object-fit: cover;
+  margin: 0 auto 0.6rem;
+  border: 3px solid rgba(15, 23, 42, 0.15);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+}
+
+/* registered symbol */
+.reg-icon {
+  font-size: 0.65em;
+  vertical-align: super;
+}
+
+
 .intro-name-content {
   display: flex;
   flex-direction: column;
