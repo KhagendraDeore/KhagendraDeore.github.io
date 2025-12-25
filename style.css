@@ -25,7 +25,7 @@
 ========================= */
 .intro-name {
   background: #f8fafc;
-  padding: 1.8rem 0 1.4rem;
+  padding: 2.4rem 0 1.6rem; /* more space from top */
   border-bottom: 1px solid rgba(209, 213, 219, 0.6);
   text-align: center;
 }
@@ -35,21 +35,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
+  gap: 0.4rem;
 }
 
 /* PROFILE PHOTO — FINAL */
 .profile-photo {
-  width: 92px;
-  height: 92px;
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
+
   object-fit: cover;
+  object-position: center 65%; /* prevents hair cropping */
 
   display: block;
-  margin: 0 auto 0.75rem;
+  margin: 0 auto 0.9rem;
 
   border: 2px solid rgba(15, 23, 42, 0.18);
-  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.22);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.22);
 }
 
 /* Registered symbol */
@@ -59,7 +61,7 @@
 }
 
 .name-title {
-  font-size: 2.15rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin: 0;
   letter-spacing: -0.5px;
