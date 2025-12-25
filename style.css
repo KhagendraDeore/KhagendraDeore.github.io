@@ -20,40 +20,46 @@
   box-sizing: border-box;
 }
 
-/* NAME HEADER SECTION */
+/* =========================
+   NAME HEADER SECTION
+========================= */
 .intro-name {
   background: #f8fafc;
-  padding: 2.2rem 0 1.6rem;
+  padding: 1.8rem 0 1.4rem;
   border-bottom: 1px solid rgba(209, 213, 219, 0.6);
   text-align: center;
 }
 
-/* PROFILE PHOTO */
-.profile-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 999px;
-  object-fit: cover;
-  margin: 0 auto 0.6rem;
-  border: 3px solid rgba(15, 23, 42, 0.15);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+.intro-name-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
 }
 
-/* registered symbol */
+/* PROFILE PHOTO — FINAL */
+.profile-photo {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  display: block;
+  margin: 0 auto 0.75rem;
+
+  border: 2px solid rgba(15, 23, 42, 0.18);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.22);
+}
+
+/* Registered symbol */
 .reg-icon {
   font-size: 0.65em;
   vertical-align: super;
 }
 
-
-.intro-name-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
 .name-title {
-  font-size: 2.2rem;
+  font-size: 2.15rem;
   font-weight: 700;
   margin: 0;
   letter-spacing: -0.5px;
@@ -66,7 +72,9 @@
   margin: 0;
 }
 
-
+/* =========================
+   BASE STYLES
+========================= */
 html,
 body {
   margin: 0;
@@ -95,7 +103,9 @@ a {
   padding: 0 1.5rem;
 }
 
-/* Header / Nav */
+/* =========================
+   HEADER / NAV
+========================= */
 .site-header {
   position: sticky;
   top: 0;
@@ -135,7 +145,9 @@ a {
   border-color: var(--primary);
 }
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
 .hero {
   position: relative;
   background: radial-gradient(circle at top, #0b4d7c 0, #021827 55%, #010b14 100%);
@@ -174,7 +186,9 @@ a {
   color: #e5e7eb;
 }
 
-/* HERO CARDS — fixed contrast */
+/* =========================
+   HERO CARDS
+========================= */
 .hero-highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -192,7 +206,6 @@ a {
 
 .hero-card p {
   margin: 0;
-  color: var(--text-main);
 }
 
 .hero-card .card-icon {
@@ -201,14 +214,12 @@ a {
   color: var(--primary);
 }
 
-/* CTA button */
+/* =========================
+   BUTTON
+========================= */
 .btn-primary {
   border: none;
-  outline: none;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 0.8rem 1.7rem;
   border-radius: 999px;
   background: var(--primary);
@@ -216,16 +227,17 @@ a {
   font-weight: 600;
   font-size: 0.95rem;
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
-  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .btn-primary:hover {
   background: var(--primary-dark);
   transform: translateY(-1px);
-  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.5);
 }
 
-/* Sections */
+/* =========================
+   SECTIONS / CARDS / GRID
+========================= */
 .section {
   padding: 4rem 0;
   background: var(--bg-section);
@@ -238,7 +250,7 @@ a {
 .section h2 {
   text-align: center;
   font-size: 1.9rem;
-  margin: 0 0 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
@@ -246,7 +258,6 @@ a {
   margin: 0 auto 2.5rem;
   max-width: 720px;
   color: var(--text-muted);
-  font-size: 0.98rem;
 }
 
 /* Cards */
@@ -256,363 +267,33 @@ a {
   padding: 1.25rem 1.4rem;
   border: 1px solid rgba(209, 213, 219, 0.8);
   box-shadow: var(--shadow-soft);
-  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease,
-    background 0.16s ease;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
 }
 
-/* POP-OUT ON HOVER */
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
-  border-color: rgba(148, 163, 184, 0.9);
 }
 
-/* About */
-.stacked-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* align icons + text */
-.about-card {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-}
-
-/* circular icon badges for About */
-.about-card .card-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  background: #e5edf7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  color: var(--primary);
-  flex-shrink: 0;
-}
-
-.core-strength {
-  background: #e5edf7;
-  border-style: dashed;
-}
-
-/* Experience */
-.experience-card .experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.experience-card h3 {
-  margin: 0;
-}
-
-.role {
-  margin: 0.15rem 0 0;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.role span {
-  font-weight: 500;
-}
-
-/* optional: give experience icons same badge style */
-.experience-card .card-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  background: #e5edf7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  color: var(--primary);
-  flex-shrink: 0;
-}
-
-.bullet-list {
-  margin: 0.2rem 0 0;
-  padding-left: 1.1rem;
-  color: var(--text-main);
-}
-
-.bullet-list li {
-  margin-bottom: 0.25rem;
-  font-size: 0.93rem;
-}
-
-/* Grid layouts */
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
 }
 
-.project-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.4rem;
-  font-size: 1.02rem;
-}
-
-.project-card p {
-  margin: 0.2rem 0;
-  font-size: 0.9rem;
-}
-
-.tag-row {
-  margin-top: 0.7rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.tag {
-  background: #e5edf7;
-  color: #1f2933;
-  border-radius: 999px;
-  padding: 0.15rem 0.6rem;
-  font-size: 0.78rem;
-  font-weight: 500;
-}
-
-/* Skills */
-.skills-grid {
-  margin-bottom: 1.5rem;
-}
-
-.skills-card .card-header {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 0.7rem;
-}
-
-.skills-card h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-.skills-card .card-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  background: #e5edf7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.05rem;
-  color: var(--primary);
-  flex-shrink: 0;
-}
-
-.pill-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 1.2rem;
-}
-
-/* 🔥 Stronger, darker skill text */
-.pill-list li {
-  font-size: 0.95rem;
-  color: #374151; /* stronger grey */
-  font-weight: 500;
-}
-
-/* optional hover pop (subtle) */
-.pill-list li:hover {
-  color: var(--primary);
-  transition: 0.2s ease;
-  cursor: default;
-}
-
-
-.cert-banner {
-  margin-top: 0.5rem;
-  text-align: center;
-  background: #0b304b;
-  color: #e5e7eb;
-}
-
-/* Contact */
-.contact-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
-  gap: 1.5rem;
-  align-items: flex-start;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.contact-form label {
-  font-size: 0.9rem;
-  color: var(--text-main);
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  border-radius: 10px;
-  border: 1px solid var(--border-soft);
-  padding: 0.65rem 0.75rem;
-  font-size: 0.9rem;
-  font-family: inherit;
-  outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
-.contact-alt {
-  text-align: center;
-}
-
-.contact-alt-title {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.contact-email {
-  color: var(--primary);
-  font-weight: 500;
-  word-break: break-all;
-}
-
-.contact-note {
-  margin-top: 0.7rem;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-/* Footer */
-.site-footer {
-  background: #0b1726;
-  color: #d1d5db;
-  padding: 1.8rem 0 1.2rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-}
-
-.contact-phone {
-  font-size: 1rem;
-  margin: 0.2rem 0 0.6rem;
-  color: var(--text-main);
-  font-weight: 500;
-}
-
-.contact-link {
-  display: inline-block;
-  margin-top: 0.4rem;
-  font-size: 1rem;
-  color: var(--primary);
-  font-weight: 500;
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
-
-.linkedin-icon {
-  width: 16px;
-  height: 16px;
-  color: var(--primary);
-  flex-shrink: 0;
-}
-
-.contact-note {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 1px solid rgba(55, 65, 81, 0.8);
-}
-
-.footer-title {
-  font-weight: 600;
-  margin: 0 0 0.15rem;
-}
-
-.btn-outline {
-  border-radius: 999px;
-  padding: 0.55rem 1.3rem;
-  border: 1px solid #9ca3af;
-  color: #e5e7eb;
-  font-size: 0.88rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-}
-
-.btn-outline:hover {
-  background: #e5e7eb;
-  color: #111827;
-  border-color: transparent;
-}
-
-.footer-bottom {
-  padding-top: 0.7rem;
-  text-align: center;
-  color: #9ca3af;
-}
-
-/* Responsive */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .contact-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
   .nav {
     display: none;
-  }
-
-  .hero {
-    padding-top: 3.5rem;
-  }
-
-  .section {
-    padding: 3rem 0;
   }
 
   .grid {
